@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <!-- <tcmDialog title="傷科處理" :tabs="['部位', '處置/手法']">
+      <template v-slot:0="scope">
+        <el-button @click="addToItems1(scope.items)">
+          ADD
+        </el-button>
+      </template>
+    </tcmDialog> -->
+    <medicationOrder></medicationOrder>
+    <!-- <doctorOrder></doctorOrder> -->
+    <!-- <traumaDialog></traumaDialog> -->
+    <!-- <acupunctureDialog></acupunctureDialog> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import tcmDialog from './components/tcmDialog'
+import medicationOrder from '@/components/medicationOrder'
+import doctorOrder from '@/components/doctorOrder'
+import traumaDialog from '@/components/dialog/traumaDialog'
+import acupunctureDialog from '@/components/dialog/acupunctureDialog'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    medicationOrder,
+    doctorOrder,
+    traumaDialog,
+    acupunctureDialog
+  },
+  data () {
+    return {
+    }
+  },
+  methods: {
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
